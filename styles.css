@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+}
+
+.description {
+    color: black;
+    font-family: Roboto;
+    margin-left: 25px;
+    position: absolute;
+    z-index: 100;
+}
