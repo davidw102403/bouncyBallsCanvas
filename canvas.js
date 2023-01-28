@@ -1,14 +1,16 @@
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
-canvas.width = innerWidth;
-canvas.height = innerHeight;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 // Variables
 const mouse = {
   x: innerWidth / 2,
   y: innerHeight / 2
 };
+
+var ballCount = 250;
 
 const colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66'];
 
@@ -82,7 +84,7 @@ var ball;
 var ballArray;
 function init() {
     ballArray = [];
-    for (var i = 0; i < 200; i++) {
+    for (var i = 0; i < ballCount; i++) {
         var radius = randomIntFromRange(8, 20);
         var x = randomIntFromRange(radius, canvas.width - radius);
         var y = randomIntFromRange(0, canvas.height - radius);
@@ -105,3 +107,16 @@ function animate() {
 
 init()
 animate()
+
+
+// Settings
+var count = document.getElementById('count');
+var displayCount = document.getElementById('number');
+displayCount.innerHTML = ballCount;
+
+function changeBallCount() {
+    ballCount = count.value;
+    displayCount.innerHTML = count.value;
+}
+    
+

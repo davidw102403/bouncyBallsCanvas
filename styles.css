@@ -2,10 +2,38 @@ body {
     margin: 0;
 }
 
+canvas {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
 .description {
-    color: black;
+    position: absolute;
+    margin-left: 20px;
     font-family: Roboto;
-    margin-left: 25px;
+}
+
+.title {
+    margin-bottom: 0;
+}
+
+.author {
+    margin-top: 0;
+}
+
+.settings {
+    width: 20%;
     position: absolute;
     z-index: 100;
+    margin-left: 20px;
+    margin-top: 100px;
+}
+#count {
+    width: 100%;
+}
+.countLabel {
+    margin: 0;
+    font-family: Roboto;
 }
